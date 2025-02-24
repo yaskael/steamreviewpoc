@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Maker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <h1>Review Maker</h1>
+
+  <div id="container">
+    <!-- WYSIWYG Editor -->
+    <div id="editor-container">
+      <!-- Editable Content Area -->
+      <div id="editor" contenteditable="true"></div>
+
+      <!-- Button to Generate Steam Format -->
+      <button id="generateBtn" onclick="generateSteamFormat()">Generate Steam Format</button>
+
+      <!-- Output (preformatted) -->
+      <pre id="output"></pre>
+    </div>
+
+    <!-- Formatting Buttons Panel -->
+    <!-- Added class="toolbar" so your script can select .toolbar button -->
+    <div id="buttons-container" class="toolbar">
+      <button id="boldBtn" onclick="toggleStyle('bold')">Bold</button>
+      <button id="italicBtn" onclick="toggleStyle('italic')">Italic</button>
+      <button id="underlineBtn" onclick="toggleStyle('underline')">Underline</button>
+      <!-- Choose either 'strike' or 'strikeThrough', as long as your script matches -->
+      <button id="strikeBtn" onclick="toggleStyle('strike')">Strikethrough</button>
+
+      <button onclick="insertLine()">Line</button>
+      <button onclick="wrapTextWithTag('[spoiler]', '[/spoiler]')">Spoiler</button>
+      <button onclick="insertQuote()">Quote</button>
+      <button onclick="insertList('ul')">Unordered List</button>
+      <button onclick="insertList('ol')">Ordered List</button>
+      <button onclick="insertHeader(1)">H1</button>
+      <button onclick="insertHeader(2)">H2</button>
+      <button onclick="insertHeader(3)">H3</button>
+    </div>
+
+    <!-- Table Form UI -->
+    <div id="table-form">
+      <label for="table-rows">Rows:</label>
+      <input type="number" id="table-rows" min="1" value="3" />
+
+      <label for="table-cols">Cols:</label>
+      <input type="number" id="table-cols" min="1" value="3" />
+
+      <label>
+        <input type="checkbox" id="table-header" />
+        Include Header
+      </label>
+
+      <button onclick="insertTableFromForm()">Add Table</button>
+    </div>
+  </div>
+
+</body>
+</html>
