@@ -1,8 +1,6 @@
 Review Maker
 
-A simple WYSIWYG (What You See Is What You Get) editor built for generating Steam-style reviews with rich formatting options. It supports headings, bold, italic, underline, strikethrough, blockquotes, lists, horizontal rules, spoiler tags—and, in this environment, [table] syntax is recognized for displaying tables.
-
-	Important: By default, official Steam comment/review sections do not support [table] tags. If you have confirmed your environment supports them (via mods, special forums, or custom parsing), tables will render as intended. Otherwise, [table], [tr], [td], and [th] tags may appear as literal text in a standard Steam review.
+A simple WYSIWYG (What You See Is What You Get) editor built for generating Steam-style reviews with rich formatting options. It supports headings, bold, italic, underline, strikethrough, blockquotes, lists, horizontal rules, spoiler tags—and, tables.
 
 Features
 	•	Live Editing: Type and style text in real-time within a contenteditable div.
@@ -14,18 +12,6 @@ Features
 	•	Horizontal Rule: [hr].
 	•	Spoiler Tag: [spoiler] ... [/spoiler].
 	•	Table Generation:
-If your environment supports it, <table> elements will convert to:
-
-[table]
-    [tr]
-        [th]Header[/th]
-        [th]Header 2[/th]
-    [/tr]
-    [tr]
-        [td]Cell 1[/td]
-        [td]Cell 2[/td]
-    [/tr]
-[/table]
 
 
 	•	Steam-Compatible Output: One-click conversion from HTML to bracket-based tags displayed in a <pre> block, ready for copy-paste.
@@ -33,7 +19,7 @@ If your environment supports it, <table> elements will convert to:
 Getting Started
 	1.	Clone the repository or download the source files:
 
-git clone https://github.com/<your-username>/review-maker.git
+git clone https://github.com/yaskael/review-maker.git
 cd review-maker
 
 
