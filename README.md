@@ -1,6 +1,6 @@
 Review Maker
 
-A simple WYSIWYG (What You See Is What You Get) editor built for generating Steam-style reviews with rich formatting options. It supports headings, bold, italic, underline, strikethrough, blockquotes, lists, horizontal rules, spoiler tags—and, tables.
+A simple WYSIWYG (What You See Is What You Get) editor built for generating Steam reviews. It supports headings, bold, italic, underline, strikethrough, blockquotes, lists, horizontal rules, spoiler tags—and, tables.
 
 Features
 	•	Live Editing: Type and style text in real-time within a contenteditable div.
@@ -21,60 +21,8 @@ Getting Started
 
 git clone https://github.com/yaskael/review-maker.git
 cd review-maker
+open index.html on your browser.
 
-
-	2.	Open index.html in your web browser:
-	•	No build steps or compilation are required.
-	•	All files (index.html, script.js, styles.css) can be hosted locally or on a simple web server.
-	3.	Start Editing:
-	•	Type in the editor (#editor area).
-	•	Use the toolbar to apply formatting:
-	•	Bold, Italic, Underline, Strikethrough
-	•	Headings (H1, H2, H3)
-	•	Unordered/Ordered Lists
-	•	Blockquotes
-	•	Horizontal Line
-	•	Spoiler Tags
-	•	Fill out the table form (rows, columns, optional header) to insert a table (if supported by your environment).
-	4.	Generate Steam Format:
-	•	Click “Generate Steam Format” to transform the HTML content into bracket-based tags (BBCode-like syntax).
-	•	The formatted text will appear in the <pre id="output"> element.
-	•	Copy the result into your target platform (Steam or other).
-
-Usage Example
-	1.	Type something like:
-
-This is my new [spoiler]secret[/spoiler] build!
-
-< Insert Table >
-
-
-	2.	Add a table with 3 rows, 3 columns, and a header:
-	•	Rows: 3
-	•	Cols: 3
-	•	Include Header: checked
-	3.	The editor automatically inserts something like:
-
-[table]
-    [tr]
-        [th]Header[/th]
-        [th]Header[/th]
-        [th]Header[/th]
-    [/tr]
-    [tr]
-        [td]Cell[/td]
-        [td]Cell[/td]
-        [td]Cell[/td]
-    [/tr]
-    [tr]
-        [td]Cell[/td]
-        [td]Cell[/td]
-        [td]Cell[/td]
-    [/tr]
-[/table]
-
-
-	4.	Click “Generate Steam Format”. The final text (with your other formatting, headings, etc.) appears in a separate box for easy copying.
 
 File Structure
 
